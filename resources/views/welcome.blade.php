@@ -1,100 +1,51 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('app')
 
-        <title>Laravel</title>
+@section('active-panel')
+　テスト実行者
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+@section('title')
+　YouTubeAPI_test
+@endsection
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+@section('content')
 
-            .full-height {
-                height: 100vh;
-            }
+{{-- メインコンテンツ --}}
+<div id="contents">
+    <section>
+        <h2>YOUTUBE TEST フォーム</h2>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+        <!-- フォームの情報はここからです -->
+        <form name="form1" enctype="multipart/form-data" method="post" action="">
+            <input type="hidden" name="mode" value="form">
+            <table class="ta1">
+                <!-- 入力／確認 -->
+                <!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+                <tr>
+                    <th width="150">お名前<span style="color:red">※</span></th>
+                    <td>
+                        <input name="item1" value="" type="text" size="40" maxlength="500" class="ws">
+                    </td>
+                </tr>
+                <tr>
+                    <th width="150">メールアドレス<span style="color:red">※</span></th>
+                    <td>
+                        <input name="item2" value="" type="text" size="40" maxlength="500" class="ws">
+                    </td>
+                </tr>
+                <tr>
+                    <th>お問い合わせ内容<span style="color:red">※</span></th>
+                    <td>
+                        <textarea name="item3" cols="40" rows="10" class="wl"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="c">
+                <input type="submit" value="内容を確認する" class="btn">
+                &nbsp;
+                <input type="reset" value="リセット" class="btn">
             </div>
-        </div>
-    </body>
-</html>
+        </form>
+    </section>
+</div>
+@endsection
