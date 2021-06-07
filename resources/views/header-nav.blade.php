@@ -1,33 +1,37 @@
 
-	<header>
-		<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE COMPANY"></a></h1>
+<header>    
+	<div class="container">
+		<div class="row">
+			<div class="col span-12">
+				<div class="head">
+					<h1><a href="index.html">PORTFOLIO</a></h1>
+					<div class="snsbox">
+						<img src="img/in-icon.png" alt="Instagram">
+						<img src="img/fb-icon.png" alt="Facebook">
+					</div>
+				</div>
+			</div>
+		</div>
 		
-		<!--PC用（901px以上端末）メニュー-->
-		<nav id="menubar">
-			<ul>
-				<li><a href="company.html">Company</a></li>
-				<li class="ddmenu-title">Service
-					<ul class="ddmenu">
-						<li><a class="nav-link" href="{{-- route('user.login') --}}">ログイン</a></li>
-						<li><a href="service.html">サービスメニュー</a></li>
-						<li><a href="service.html">サービスメニュー</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	<!--小さい端末用（900px以下端末）メニュー-->
-	<nav id="menubar-s">
-		<ul>
-			<li><a href="company.html">Company</a></li>
-			<li><a href="recruit.html">Service</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
-		<ul class="icon">
-			<li><a class="" href="https://twitter.com/Daichi_Started"><i class="mr-1 fab fa-twitter"></i></a></li>
-			<li><a class="" href="https://github.com/daichi-eng"><i class="mr-1 fab fa-github"></i></a></li>
-			<li><a class="" href="https://restarted.site/"><i class="mr-1 fas fa-blog"></i></a></li>
-		</ul>
-	</header>
-	
-	
+		<div class="row">
+			<div class="col span-12">
+				<nav>
+					<div id="open"><img src="img/button.png"></div>
+					<div id="close"><img src="img/button2.png"></div>    
+					<div id="navi">
+						<ul>
+							<li><a href="index.html">ホーム</a></li>
+							<li><a href="subpage.html">ギャラリーについて</a></li>
+							<li><a href="subpage.html">サブページ</a></li>
+							<li><a href="subpage.html">サブページ</a></li>
+							<li><a href="subpage.html">お問い合わせ</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="mainimg">
+		<img src="img/mainimg.jpg" alt="メイン画像">
+</div>
